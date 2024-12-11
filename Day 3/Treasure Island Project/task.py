@@ -22,3 +22,22 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 ''')
 print("Welcome to Treasure Island.")
 print("Your mission is to find the treasure.")
+
+direction = input("left or right?").lower()
+
+if direction == "right":
+    print("You fell into a hole. Game Over.")
+else:
+    action = input("swim or wait?").lower()
+    if action == "swim":
+        print("You were attacked by a trout. Game Over.")
+    else:
+        door = input("Which door? Red, Blue or Yellow?").lower()
+        if door == "red":
+            print("Burned by fire. Game Over.")
+        elif door == "blue":
+            print("Eaten by beasts. Game Over.")
+        elif door == "yellow":
+            print("You Win!")
+        else:
+            print("Game Over.")
