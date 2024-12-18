@@ -28,6 +28,9 @@ while not game_over:
 
     # TODO-4: - If the user has entered a letter they've already guessed, print the letter and let them know.
 
+    if guess in correct_letters:
+        print(f"You've already guessed {guess}")
+
     display = ""
 
     for letter in chosen_word:
@@ -39,10 +42,6 @@ while not game_over:
         else:
             display += "_"
     print("Word to guess: " + display)
-
-    for guess in correct_letters:
-        if guess in correct_letters:
-            print(f"You've already guessed {guess}")
 
     # TODO-5: - If the letter is not in the chosen_word, print out the letter and let them know it's not in the word.
     #  e.g. You guessed d, that's not in the word. You lose a life.
